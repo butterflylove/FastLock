@@ -28,5 +28,6 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-data-redis')
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile('redis.clients:jedis:2.3.1')
+	compile('commons-lang:commons-lang:2.5')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
