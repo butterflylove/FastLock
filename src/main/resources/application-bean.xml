@@ -22,4 +22,8 @@
                      pointcut-ref="controllerPointcut" order="1"/>
     </aop:config>
 
+    <bean id="pooledJedisDelegateBuilder" class="com.destiny.lock.redis.PooledJedisClientBuilder">
+        <property name="jedisPool" ref=""></property>
+    </bean>
+    <bean id="redisClient" factory-bean="pooledJedisDelegateBuilder" factory-method="build"/>
 </beans>
