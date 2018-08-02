@@ -31,6 +31,8 @@ public class PooledJedisClientDelegate implements InvocationHandler {
             return method.invoke(jedisClient, args);
         } catch (Exception e) {
             logger.error("调用redis出错", e);
+            jedisPool.returnBrokenResource(jedisClient);
+            jedisClient = null;
             throw e;
         } finally {
             if (jedisClient != null) {
