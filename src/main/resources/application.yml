@@ -1,0 +1,13 @@
+#格式：redis://:[密码]@[服务器地址]:[端口]/[db index]
+redis:
+  pool:
+    maxActive: 200
+    maxIdle: 50
+    maxWaitMillis: 20000
+    maxWait: 300
+  uri: redis://:foobared@127.0.0.1:6379/0
+  host: 127.0.0.1
+  port: 6379
+  timeout: 30000
+  password: foobared
+  database: 0

@@ -6,8 +6,12 @@ import com.destiny.lock.api.LockTouchRequest;
 import org.hibernate.validator.constraints.NotEmpty;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
+import redis.clients.jedis.Jedis;
+import redis.clients.jedis.JedisPool;
+
 import javax.validation.constraints.NotNull;
 
 /**
@@ -16,12 +20,20 @@ import javax.validation.constraints.NotNull;
 @RestController
 public class LockController {
     private static final Logger logger = LoggerFactory.getLogger(LockController.class);
+    @Autowired
+    private JedisPool jedisPool;
+
+    @RequestMapping(value = "/test", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    public String test(@RequestParam(name = "name") String name) {
+        Jedis jedis = jedisPool.getResource();
+        return jedis.get(name);
+    }
 
     /**
      * 加锁
      */
     @RequestMapping(value = "/lock", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
-    public BaseResponse test(@RequestBody LockRequest lockRequest) {
+    public BaseResponse lock(@RequestBody LockRequest lockRequest) {
         return new BaseResponse();
     }
 
