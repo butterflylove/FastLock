@@ -20,11 +20,6 @@
                      <!--pointcut-ref="controllerPointcut" order="1"/>-->
     <!--</aop:config>-->
 
-    <!--<bean id="pooledJedisDelegateBuilder" class="com.destiny.lock.redis.PooledJedisClientBuilder">-->
-        <!--<property name="jedisPool" ref=""></property>-->
-    <!--</bean>-->
-    <!--<bean id="redisClient" factory-bean="pooledJedisDelegateBuilder" factory-method="build"/>-->
-
     <bean id="jedisPool" class="redis.clients.jedis.JedisPool">
         <constructor-arg name="poolConfig" ref="jedisPoolConfig" />
         <constructor-arg name="host" value="${redis.host}" />
