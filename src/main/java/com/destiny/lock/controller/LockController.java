@@ -3,6 +3,7 @@ package com.destiny.lock.controller;
 import com.destiny.lock.api.BaseResponse;
 import com.destiny.lock.api.LockRequest;
 import com.destiny.lock.api.LockTouchRequest;
+import com.destiny.lock.biz.LockService;
 import org.hibernate.validator.constraints.NotEmpty;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,6 +22,8 @@ import javax.validation.constraints.NotNull;
 public class LockController {
     private static final Logger logger = LoggerFactory.getLogger(LockController.class);
     @Autowired
+    private LockService lockService;
+    @Autowired
     private JedisPool jedisPool;
 
     @RequestMapping(value = "/test", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
@@ -34,6 +37,7 @@ public class LockController {
      */
     @RequestMapping(value = "/lock", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     public BaseResponse lock(@RequestBody LockRequest lockRequest) {
+        lockService.lock(lockRequest.getLockCode(), lockRequest.getRequestId(), lockRequest.getExpiredTime());
         return new BaseResponse();
     }
 

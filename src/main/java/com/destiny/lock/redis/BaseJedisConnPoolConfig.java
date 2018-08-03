@@ -26,18 +26,18 @@ public class BaseJedisConnPoolConfig {
     @Value("${redis.pool.testOnBorrow:true}")
     private boolean testOnBorrow;
 
-//    @Bean
-//    public JedisPoolConfig jedisPoolConfig() {
-//        JedisPoolConfig poolConfig = new JedisPoolConfig();
-//        poolConfig.setMaxTotal(maxTotal);
-//        poolConfig.setMinIdle(minIdle);
-//        poolConfig.setMaxIdle(maxIdle);
-//        poolConfig.setMaxWaitMillis(maxWaitMillis);
-//        poolConfig.setTestOnBorrow(testOnBorrow);
-//        poolConfig.setLifo(LIFO);
-//        poolConfig.setTestWhileIdle(testWhileIdle);
-//        poolConfig.setTimeBetweenEvictionRunsMillis(timeBetweenEvictionRunsMillis);
-//        poolConfig.setNumTestsPerEvictionRun(numTestsPerEvictionRun);
-//        return poolConfig;
-//    }
+    @Bean
+    public JedisPoolConfig jedisPoolConfig() {
+        JedisPoolConfig poolConfig = new JedisPoolConfig();
+        poolConfig.setMaxTotal(maxTotal);
+        poolConfig.setMinIdle(minIdle);
+        poolConfig.setMaxIdle(maxIdle);
+        poolConfig.setMaxWaitMillis(maxWaitMillis);
+        poolConfig.setTestOnBorrow(testOnBorrow);
+        poolConfig.setLifo(LIFO);
+        poolConfig.setTestWhileIdle(testWhileIdle);
+        poolConfig.setTimeBetweenEvictionRunsMillis(timeBetweenEvictionRunsMillis);
+        poolConfig.setNumTestsPerEvictionRun(numTestsPerEvictionRun);
+        return poolConfig;
+    }
 }
