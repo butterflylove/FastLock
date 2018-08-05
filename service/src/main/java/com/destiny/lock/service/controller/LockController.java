@@ -1,9 +1,9 @@
-package com.destiny.lock.controller;
+package com.destiny.lock.service.controller;
 
 import com.destiny.lock.api.*;
 import com.destiny.lock.api.base.LockException;
 import com.destiny.lock.api.base.LockResponseCode;
-import com.destiny.lock.biz.LockService;
+import com.destiny.lock.service.biz.LockService;
 import org.hibernate.validator.constraints.NotEmpty;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

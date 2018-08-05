@@ -1,4 +1,4 @@
-package com.destiny.lock.biz;
+package com.destiny.lock.service.biz;
 
 /**
  * Created by zhangtianlong on 18/7/31.

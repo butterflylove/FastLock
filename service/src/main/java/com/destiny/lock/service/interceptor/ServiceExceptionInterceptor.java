@@ -1,4 +1,4 @@
-package com.destiny.lock.interceptor;
+package com.destiny.lock.service.interceptor;
 
 import com.destiny.lock.api.BaseResponse;
 import com.destiny.lock.api.base.LockException;

@@ -1,4 +1,4 @@
-package com.destiny.lock.redis;
+package com.destiny.lock.service.redis;
 
 import com.destiny.lock.api.base.LockException;
 import com.destiny.lock.api.base.LockResponseCode;

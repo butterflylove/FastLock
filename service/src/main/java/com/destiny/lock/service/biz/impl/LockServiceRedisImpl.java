@@ -1,9 +1,9 @@
-package com.destiny.lock.biz.ipml;
+package com.destiny.lock.service.biz.impl;
 
 import com.destiny.lock.api.base.LockException;
 import com.destiny.lock.api.base.LockResponseCode;
-import com.destiny.lock.biz.LockService;
-import com.destiny.lock.redis.RedisTemplate;
+import com.destiny.lock.service.biz.LockService;
+import com.destiny.lock.service.redis.RedisTemplate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
