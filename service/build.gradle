@@ -15,10 +15,6 @@ apply plugin: 'org.springframework.boot'
 
 sourceCompatibility = 1.8
 
-repositories {
-    mavenCentral()
-}
-
 dependencies {
     compile project(':client')
     compile('org.springframework.boot:spring-boot-starter-actuator')
