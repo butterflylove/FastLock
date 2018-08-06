@@ -1,3 +1,8 @@
 dependencies {
     compile project(':api')
+    compile rootProject.ext.dependencies["slf4j-api"]
+    compile rootProject.ext.dependencies["commons-lang3"]
+    compile rootProject.ext.dependencies["spring-core"]
+    compile rootProject.ext.dependencies["spring-webmvc"]
+    compile rootProject.ext.dependencies["httpclient"]
 }

@@ -1,5 +1,13 @@
 ext {
     dependencies = [
-            "hibernate-validator": 'org.hibernate:hibernate-validator:5.3.6.Final'
+            "hibernate-validator": 'org.hibernate:hibernate-validator:5.3.6.Final',
+            "slf4j-api": 'org.slf4j:slf4j-api:1.7.25',
+            "commons-lang3": 'org.apache.commons:commons-lang3:3.1',
+            "jackson-core": 'com.fasterxml.jackson.core:jackson-core:2.8.11',
+            "jackson-annotations": 'com.fasterxml.jackson.core:jackson-annotations:2.8.0',
+            "jackson-databind": 'com.fasterxml.jackson.core:jackson-databind:2.8.11.2',
+            "spring-core": 'org.springframework:spring-core:4.3.18.RELEASE',
+            "spring-webmvc": 'org.springframework:spring-webmvc:4.3.18.RELEASE',
+            "httpclient": 'org.apache.httpcomponents:httpclient:4.3.6'
     ]
 }

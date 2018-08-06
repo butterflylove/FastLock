@@ -12,7 +12,8 @@ public enum LockResponseCode implements BaseErrorEnum {
     SYSTEM_ERROR("00005", "系统内部错误"),
     UNLOCK_ERROR("00006","解锁失败"),
     TOUCH_ERROR("00007","TOUCH有失败"),
-    LOCK_PROCESSOR_NOT_EXIST("00008","锁处理器不存在");
+    LOCK_PROCESSOR_NOT_EXIST("00008","锁处理器不存在"),
+    NET_CALL_EXCEPTION("00009", "网络调用异常");
 
     private String errorCode;
     private String errorDesc;
