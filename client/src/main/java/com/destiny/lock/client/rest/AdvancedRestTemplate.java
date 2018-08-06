@@ -31,12 +31,12 @@ public class AdvancedRestTemplate extends RestTemplate {
         Assert.isTrue(ClassUtils.isPresent("com.fasterxml.jackson.databind.ObjectMapper", RestTemplate.class.getClassLoader())
             && ClassUtils.isPresent("com.fasterxml.jackson.core.JsonGenerator", RestTemplate.class.getClassLoader()),
                 "JacksonJson2 NOT found!!");
-        List<HttpMessageConverter<?>> messageConverters = new ArrayList<>();
+        List<HttpMessageConverter<?>> messageConverters = new ArrayList<HttpMessageConverter<?>>();
 
         messageConverters.add(new ByteArrayHttpMessageConverter());
         messageConverters.add(new StringHttpMessageConverter(Charset.forName(charset)));
         messageConverters.add(new ResourceHttpMessageConverter());
-        messageConverters.add(new SourceHttpMessageConverter<>());
+        messageConverters.add(new SourceHttpMessageConverter());
 
         super.setMessageConverters(messageConverters);
 

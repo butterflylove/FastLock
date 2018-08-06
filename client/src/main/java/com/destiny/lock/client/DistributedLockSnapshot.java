@@ -10,8 +10,8 @@ import java.util.concurrent.ConcurrentHashMap;
  * 锁快照
  */
 public class DistributedLockSnapshot {
-    public static final ThreadLocal<Set<String>> CURRENT_THREAD_OWNED_LOCKS = new ThreadLocal<>();
+    public static final ThreadLocal<Set<String>> CURRENT_THREAD_OWNED_LOCKS = new ThreadLocal<Set<String>>();
 
     public static final ConcurrentHashMap<String, MutablePair<Thread, LockRequest>> ALL_LOCKS =
-            new ConcurrentHashMap<>();
+            new ConcurrentHashMap<String, MutablePair<Thread, LockRequest>>();
 }
