@@ -8,9 +8,11 @@ import com.destiny.lock.api.base.LockException;
 import com.destiny.lock.api.base.LockResponseCode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Repository;
 import org.springframework.util.Assert;
 import org.springframework.util.CollectionUtils;
 
+@Repository
 public class LockRestClient extends AbstractRestClient {
     private static final Logger logger = LoggerFactory.getLogger(LockRestClient.class);
     private static final String HOST = "http://127.0.0.1:8080";

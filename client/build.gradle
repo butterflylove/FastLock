@@ -1,8 +1,30 @@
+apply plugin: 'maven'
+
+def artifactId = 'fast-lock-client'
+
+task sourcesJar(type: Jar, dependsOn: classes) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+
+artifacts {
+    archives sourcesJar
+}
+
+install {
+    repositories.mavenInstaller {
+        pom.version = "$project.version"
+        pom.artifactId = "$artifactId"
+        pom.groupId = "$project.group"
+    }
+}
+
 dependencies {
     compile project(':api')
     compile rootProject.ext.dependencies["slf4j-api"]
     compile rootProject.ext.dependencies["commons-lang3"]
     compile rootProject.ext.dependencies["spring-core"]
     compile rootProject.ext.dependencies["spring-webmvc"]
+    compile rootProject.ext.dependencies["spring-boot-autoconfigure"]
     compile rootProject.ext.dependencies["httpclient"]
 }

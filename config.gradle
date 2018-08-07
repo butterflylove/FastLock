@@ -8,6 +8,7 @@ ext {
             "jackson-databind": 'com.fasterxml.jackson.core:jackson-databind:2.8.11.2',
             "spring-core": 'org.springframework:spring-core:4.3.18.RELEASE',
             "spring-webmvc": 'org.springframework:spring-webmvc:4.3.18.RELEASE',
+            "spring-boot-autoconfigure": 'org.springframework.boot:spring-boot-autoconfigure:1.5.14.RELEASE',
             "httpclient": 'org.apache.httpcomponents:httpclient:4.3.6'
     ]
 }

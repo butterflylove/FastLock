@@ -8,6 +8,7 @@ import org.springframework.http.converter.ByteArrayHttpMessageConverter;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.converter.ResourceHttpMessageConverter;
 import org.springframework.http.converter.StringHttpMessageConverter;
+import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.http.converter.xml.SourceHttpMessageConverter;
 import org.springframework.util.Assert;
 import org.springframework.util.ClassUtils;
@@ -37,6 +38,7 @@ public class AdvancedRestTemplate extends RestTemplate {
         messageConverters.add(new StringHttpMessageConverter(Charset.forName(charset)));
         messageConverters.add(new ResourceHttpMessageConverter());
         messageConverters.add(new SourceHttpMessageConverter());
+        messageConverters.add(new MappingJackson2HttpMessageConverter());
 
         super.setMessageConverters(messageConverters);
 
