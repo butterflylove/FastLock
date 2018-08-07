@@ -51,7 +51,7 @@ public class ServiceExceptionInterceptor implements MethodInterceptor {
         }
         try {
             logger.info("开始执行{}方法{}参数:{}", serviceName, methodName, args);
-            handlerBinderErrors(args);//?��??????errors
+            handlerBinderErrors(args);
             BaseResponse responseVO = (BaseResponse) invocation.proceed();
             responseVO = handlerSuccessFlag(responseVO == null ? (BaseResponse) returnType
                     .newInstance() : responseVO);

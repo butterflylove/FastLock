@@ -19,6 +19,7 @@ dependencies {
     compile project(':client')
     compile('org.springframework.boot:spring-boot-starter-actuator')
     compile('org.springframework.boot:spring-boot-starter-web')
+    compile('org.springframework.boot:spring-boot-starter-aop')
     compile('redis.clients:jedis:2.9.0')
     compile('org.apache.commons:commons-lang3:3.1')
     testCompile('org.springframework.boot:spring-boot-starter-test')

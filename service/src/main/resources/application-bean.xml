@@ -10,15 +10,15 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"
        default-autowire="byName">
 
-    <!--<bean id="serviceControllerExceptionInterceptor"-->
-          <!--class="com.destiny.lock.interceptor.ServiceExceptionInterceptor"/>-->
+    <bean id="serviceControllerExceptionInterceptor"
+          class="com.destiny.lock.service.interceptor.ServiceExceptionInterceptor"/>
 
-    <!--<aop:config>-->
-        <!--<aop:pointcut id="controllerPointcut"-->
-                      <!--expression="within(com.destiny.lock.controller..*)"/>-->
-        <!--<aop:advisor advice-ref="serviceControllerExceptionInterceptor"-->
-                     <!--pointcut-ref="controllerPointcut" order="1"/>-->
-    <!--</aop:config>-->
+    <aop:config>
+        <aop:pointcut id="controllerPointcut"
+                      expression="within(com.destiny.lock.service.controller..*)"/>
+        <aop:advisor advice-ref="serviceControllerExceptionInterceptor"
+                     pointcut-ref="controllerPointcut" order="1"/>
+    </aop:config>
 
     <bean id="jedisPool" class="redis.clients.jedis.JedisPool">
         <constructor-arg name="poolConfig" ref="jedisPoolConfig" />
