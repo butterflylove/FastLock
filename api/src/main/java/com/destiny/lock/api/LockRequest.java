@@ -40,7 +40,7 @@ public class LockRequest extends LockModel {
 
     @Override
     public String toString() {
-        return "LockRequest{" +
+        return "LockRequest{" + super.toString() +
                 "ownedLocks='" + ownedLocks + '\'' +
                 ", applicant='" + applicant + '\'' +
                 ", locked=" + locked +

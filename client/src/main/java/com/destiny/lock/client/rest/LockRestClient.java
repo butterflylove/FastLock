@@ -50,7 +50,7 @@ public class LockRestClient extends AbstractRestClient {
             UnlockModel unlockModel = new UnlockModel(applicant, lockCode, requestId);
             result = postForObject(HOST + "/unlock", unlockModel, BaseResponse.class);
         } catch (Exception e) {
-            logger.warn("解锁{}-{}-{}时异常:{}", applicant, lockCode, requestId, e);
+            logger.warn("解锁{}-{}-{}时异常", applicant, lockCode, requestId, e);
             throw new LockException(LockResponseCode.NET_CALL_EXCEPTION);
         }
 

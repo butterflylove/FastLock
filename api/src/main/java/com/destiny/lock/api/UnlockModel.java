@@ -10,7 +10,6 @@ public class UnlockModel {
     private String lockCode;
     @NotBlank
     private String requestId;
-    @NotBlank
     private String applicant;
 
     public UnlockModel() {

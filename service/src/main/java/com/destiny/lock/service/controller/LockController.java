@@ -50,7 +50,7 @@ public class LockController {
     /**
      * 解锁
      */
-    @RequestMapping(value = "/unlock/{applicant}/{lockCode}/{requestId}", method = RequestMethod.POST,
+    @RequestMapping(value = "/unlock/{applicant}/{lockCode}/{requestId}", method = RequestMethod.GET,
             produces = MediaType.APPLICATION_JSON_VALUE)
     public BaseResponse unlock(@PathVariable("applicant") String applicant, @PathVariable("requestId") String requestId,
                                @PathVariable("lockCode") @NotEmpty @NotNull String lockCode) {
